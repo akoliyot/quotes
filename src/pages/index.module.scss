@@ -1,0 +1,13 @@
+.contentBox {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+.author, .source {
+  font-family: 'Roboto Mono';
+  margin-bottom: 1rem;
+  color: #6C6C6C;
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300|Roboto+Mono:700');
+
+html, body {
+  height: 100%;
+}
+
+#___gatsby {
+  width: 100%;
+}
+
+#___gatsby > div {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #21262A;
+  color: #F3F3F3;
+  padding: 1.5rem;
+  display: flex;
+}
+
+h1 {
+  font-family: 'Quicksand';
+  font-weight: 300;
+  font-size: 1.9rem;
+  line-height: 1.5;
+}

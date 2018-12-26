@@ -10,6 +10,7 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      quoteVisibility: 'hidden',
       selectedQuote: this.getRandomQuote()
     }
   }
@@ -50,6 +51,13 @@ class IndexPage extends React.Component {
   componentDidMount = () => {
     console.log('componentDidMount');
     document.addEventListener('keydown', this.handleKeyPress);
+
+    // Show the hidden quote. This work around is to fix the sudden
+    // flash of old quote
+    this.setState({
+      quoteVisibility: 'show'
+    })
+
   }
 
   componentWillUnmount = () => {
@@ -60,7 +68,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div className={classNames(styles.contentBox, 'hidden')}>
+        <div className={classNames(styles.contentBox, this.state.quoteVisibility)}>
           <article>
             <h1>{this.state.selectedQuote.text}</h1>
             <footer>
